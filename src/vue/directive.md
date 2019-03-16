@@ -32,6 +32,5 @@
    <div v-color='color'>你好</div>
 </div>
 ```
-【注：color为属性，需在data中定义】
 
 #### 方法二
