@@ -8,5 +8,5 @@
 
 #### [四vue](./src/vue/HOME.md)
 
-【注：如有侵犯，请联系本人删除[https://github.com/Romenluo](1689488576@qq.com),[https://github.com/Romenluo](romenluomen@sina.com)】
+【注：如有侵犯，请联系本人删除1689488576@qq.com,romenluomen@sina.com】
 
