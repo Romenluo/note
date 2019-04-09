@@ -8,4 +8,4 @@
 * [element ui 表格分页](./problem/ElementTablePagination.md)
 
 ### [三、vue组件](./compontents/home.md)
-
+* [vue实现容器拖拽组件](./compontents/drag-contain.md)
