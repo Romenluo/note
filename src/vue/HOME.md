@@ -1,4 +1,4 @@
-### vue
+## vue
 ### [一、vue知识点](./base/home.md)
 * [vue简单介绍和 MVVM 模式](./base/vue-init.md)
 
