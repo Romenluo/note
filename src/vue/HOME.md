@@ -9,3 +9,4 @@
 
 ### [三、vue组件](./compontents/home.md)
 * [vue实现容器拖拽组件](./compontents/drag-contain.md)
+* [vue实现简单的父组件与子组件数据同步](./compontents/sync.md)
