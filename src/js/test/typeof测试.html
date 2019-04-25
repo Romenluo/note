@@ -7,7 +7,7 @@
 <body>
 <script>
     // 当变量不赋值时，自动赋值为undefined
-    var aa ;
+    /*var aa ;
     console.log(typeof aa);//undefined
 
     var bb = null;
@@ -17,9 +17,9 @@
     }
 
     var t = test();
-    console.log(typeof t)
+    console.log(typeof t)*/
     //将一个变量转为boolean类型
-    var b1 = 'hello',b2,b3 = 1,b4 = 0;
+    /*var b1 = 'hello',b2,b3 = 1,b4 = 0;
     var bb1 = Boolean(b1);
     var bb2 = Boolean(b2);
     var bb3 = Boolean(b3);
@@ -27,7 +27,12 @@
     console.log(bb1)// true
     console.log(bb2)// false
     console.log(bb3)// true
-    console.log(bb4)// false
+    console.log(bb4)// false*/
+
+    //循环所有的windows对象
+    for(var prop in window){
+      console.log(prop)
+    }
 </script>
 </body>
 </html>
