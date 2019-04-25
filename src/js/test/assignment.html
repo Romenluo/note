@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量赋值</title>
+</head>
+<body>
+
+<script>
+    /**
+     * 基本类型赋值
+     */
+    var a1 = 5;
+    var a2 = a1;
+    a1 = a1 + 5;
+    console.log(a1);// 10
+    console.log(a2);// 5
+
+    /**
+     * 引用类型赋值
+     */
+    var obj1 = {
+        name: 'luo'
+    }
+    var obj2 = obj1;
+    obj1.value = 'men';
+    console.log(obj1);// {name:'luo',value: 'men'}
+    console.log(obj2);// {name:'luo',value: 'men'}
+</script>
+</body>
+</html>

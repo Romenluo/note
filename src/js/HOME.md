@@ -4,3 +4,5 @@
 * [数据类型](./base/data-type.md)
 
 * [函数传参](./base/arguments.md)
+
+* [变量赋值](./base/assignment.md)
