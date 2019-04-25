@@ -15,14 +15,13 @@ object属于复杂数据类型，因此js有六种数据类型。
     var bb = null;
     console.log(typeof bb);//object
     ```
-##### undefined 类型 
+#### undefined 类型 
 
 * undefined类型只是一个值，使用var声明一个变量时没有初始化时的值。
-##### null 类型
+#### null 类型
 * null类型是只有一个值的类型。值为null,从逻辑上来看null值表示一个空对像指针，也是 typeof 检查 null 值
 会返回object的原因。如果一个变量要用来保存一个对象初始化就可以是null,而不是其他类型。
-#####
- boolean 类型
+#### boolean 类型
  * 该类型只有两个值，true和false。【注：true不一定等于1，false不一定等于0】,将其他类型的变量转为boolean类型
 ```js
     //将一个变量转为boolean类型
@@ -44,11 +43,11 @@ number|任何非零数字|0和NaN
 object|任何对象|null
 undefined|不适用|undefined
 
-##### number类型
+#### number类型
 * number 使用IEEE754表示整数和浮点数。
 * 数值转换：可以使用Number(),parseInt(),ParseFloat()进行转换。第一个可以转换任何类型的数据，有两种是转换字符串类型。
 
-##### String 类型
+#### String 类型
 * string 类型用于表示0或多个unicode字符组成的字符序列。
 * 将其他类型的转换位string类型，可以使用toString()方法，但是null和undefined没有toString()方法，只能使用String(null)
 返回得到字符串'null'。数字类型转为string可以加一个空字符串''。
