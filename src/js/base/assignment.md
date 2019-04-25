@@ -29,4 +29,5 @@
     console.log(obj2);// {name:'luo',value: 'men'}
 ```
 存储如图所示
+
 ![展示图](./images/内存堆.png)
