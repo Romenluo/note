@@ -31,3 +31,34 @@
 存储如图所示
 
 ![展示图](./images/内存堆.png)
+
+* 参数传值时，如果参数是基本类型，按照基本类型赋值传参。如果是参数是引用类型，按照引用类型的
+赋值方法传参，函数里面的参数对象是按照值传递的，但是按引用访问同一个对象。
+
+以下代码可以说明函数内部是按照引用方法访问同一个对象
+```js
+    /**
+     * 参数传值
+     */
+    function fun3(obj) {
+        obj.name = 'hello'
+    }
+    var ass = new Object();
+    ass.name = 'luo';
+    fun3(ass);
+    console.log(ass.name);// hello
+```
+
+为了说明参数传递是按照值传递，不是按引用传递，可以从下方代码看出
+
+```js
+function fun4(obj) {
+        obj.name = 'hello'
+        obj = new Object();
+        obj.name = 'world'
+    }
+    var ass1 = new Object();
+    ass1.name = 'luo';
+    fun4(ass1);
+    console.log(ass1.name);// hello
+```

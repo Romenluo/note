@@ -26,6 +26,27 @@
     obj1.value = 'men';
     console.log(obj1);// {name:'luo',value: 'men'}
     console.log(obj2);// {name:'luo',value: 'men'}
+    console.log('888888888888888888888888888888888888888888');
+    /**
+     * 参数传值
+     */
+    function fun3(obj) {
+        obj.name = 'hello'
+    }
+    var ass = new Object();
+    ass.name = 'luo';
+    fun3(ass);
+    console.log(ass.name);// hello
+    console.log('******************');
+    function fun4(obj) {
+        obj.name = 'hello'
+        obj = new Object();
+        obj.name = 'world'
+    }
+    var ass1 = new Object();
+    ass1.name = 'luo';
+    fun4(ass1);
+    console.log(ass1.name);// hello
 </script>
 </body>
 </html>
