@@ -1,6 +1,6 @@
 ### 类型检查
 
-####　判断js数据类型的方法
+#### 判断js数据类型的方法
 * 判断js的数据类型有四种，分别是typeof、instanceof、constructor、toString。
 ##### typeof 方法
 * typeof 可以检查以下7种类型number、boolean、string、object、undefined、function、symbol。此方法返回的事
@@ -72,7 +72,7 @@
 【注】null 和 undefined 是无效的对象，因此是不会有 constructor 存在的。一般用来检查自定义的函数。
 当使用 prototype 重写后，原有的 constructor 引用会丢失，constructor 会默认为 Object
 
-####　toString
+#### toString
 使用toString判断 Object 对象，直接调用 toString()  就能返回 [object Object] 。
 而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。
 ```js
