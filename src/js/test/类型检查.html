@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类型检查</title>
+</head>
+<body>
+
+<script>
+    // 检查字符串
+    var str = 'str';
+    console.log(typeof str) // string
+
+    // 检查数字
+    var num = 3;
+    console.log(typeof num); // number
+
+    // 检查 boolean 类型
+    var bool = false;
+    console.log(typeof bool); // boolean
+
+    // 检查 undefined 类型
+    var un;
+    console.log(typeof un); // undefined
+
+    // 检查 null 类型
+    console.log(typeof null); // object
+
+    // 检查 object 类型
+    var obj = new Object();
+    console.log(typeof obj); // object
+
+    // 检查 function 类型
+    var fun = function () {};
+    console.log(typeof fun); // function
+
+    // 检查 Symbol 类型
+    let s = Symbol();
+    console.log(typeof s); // Symbol
+
+
+    // instanceof 检查
+    var dd = new Date();
+    console.log(dd instanceof Date)// true
+
+    console.log(null instanceof Object) // true
+
+    var str = '';
+    console.log(str instanceof Number) // false
+
+    function Fun() {
+       console.log('hello world')
+    }
+    var f = new Fun();
+    console.log(f.constructor == Fun) // true
+
+    console.log('*****************toString***********************')
+    var obj = {};
+    console.log(obj.toString())// [object Object]
+    console.log(Object.prototype.toString.call('')) // [object String]
+    console.log(Object.prototype.toString.call(2)) // [object Number]
+    var array = [];
+    console.log(Object.prototype.toString.call(array)) // [object Array]
+</script>
+</body>
+</html>
