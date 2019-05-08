@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画布</title>
+  <style>
+    #my {
+      display: block;
+      border: 1px solid #dedede;
+      margin: 0px auto;
+    }
+  </style>
+</head>
+<body>
+<canvas id="my" width="800px" height="600px"></canvas>
+<img id="image" src="./images/6.jpg" hidden="hidden">
+<script>
+  var canvas = document.querySelector('#my');
+  var ctx = canvas.getContext('2d');//表示画2d图。创建一支画笔
+  /*画一个线条*/
+  //设置线宽
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = '#dedede';// 设置线颜色
+  ctx.moveTo(10, 10);//线条开始的地方
+  ctx.lineTo(50, 50);//线条结束的地方
+  ctx.stroke();//画完一条线就要执行一次
+
+
+  /*第一个三角型*/
+  ctx.beginPath();//清空子路径，一般用于开始路径的创建
+  ctx.strokeStyle = '#000'
+  ctx.moveTo(100, 100);//线条开始的地方
+  ctx.lineTo(200, 100);//第一条线
+  ctx.lineTo(100, 200);//第二条先，接住第一条线结尾出再画一条线
+  ctx.closePath();  //闭合
+  ctx.fillStyle = 'red'; // 填充颜色
+  ctx.fill();//执行填充
+  ctx.stroke();//执行线条
+
+  /****************************************************************/
+  /*绘制矩形*/
+  //画一个空心矩形
+  ctx.beginPath();
+  ctx.strokeStyle = '#1367ff'
+  ctx.strokeRect(205, 100, 50, 50);
+
+  //画一个实心矩形
+  ctx.fillStyle = "aquamarine";
+  ctx.fillRect(260, 100, 100, 100);
+
+  //清除指定的矩形区域
+  ctx.clearRect(270, 110, 50, 50);
+
+  /************************************************************/
+  /*画圆型*/
+  ctx.beginPath();
+  //设置线的颜色
+  ctx.strokeStyle = "dodgerblue";
+  //画一段圆弧,300,300是圆心，200是半径，0是超始角度，Math.PI是结束角度,是否逆时钟
+  ctx.arc(500, 100, 100, 0, Math.PI, false);
+  //闭合
+  ctx.closePath();
+  ctx.stroke();
+  /*画一个闭合圆*/
+  ctx.beginPath();
+  ctx.fillStyle = "aquamarine";
+  ctx.arc(650, 100, 50, 0, Math.PI * 2, false);
+  ctx.fill();
+
+  /*************************绘制图片****************************/
+  /** context.drawImage(image,x,y,w,h)
+   把image图像绘制到画布上x,y坐标位置，图像的宽度是w,高度是h。
+   context.drawImage(image,sx,sy,sw,sh,dx,dy,dw,dh)
+   截取image图像以sx,sy为左上角坐标，宽度为sw,高度为sh的一块矩形区域绘制到画布上以dx,dy坐标位置，图像宽度是dw,高度是dh。*/
+
+  ctx.beginPath();
+  ctx.strokeStyle = '#dd2e3e';
+  ctx.strokeRect(100, 260, 300, 300);
+  var image = document.querySelector('#image');
+  ctx.drawImage(image, 110, 270, 280, 280);
+
+  /***************绘制文字**************/
+  /**
+   * context.fillText(text,x,y,[maxWidth])
+
+   在canvas上填充文字，text表示需要绘制的文字，x,y分别表示绘制在canvas上的横，纵坐标，最后一个参数可选，表示显示文字的最大宽度，防止文字显示溢出。
+
+   context.strokeText(text,x,y,[maxWidth])
+
+   在canvas上描边文字，参数的意义同fillText
+   使用context.font属性设置字体
+   context.font='italic bolder 48px 黑体';
+   */
+  ctx.beginPath();
+  ctx.font = "50px microsoft yahei";
+  ctx.strokeText("Hello World", 500, 500);
+  //填充
+  ctx.fillStyle = '#dedede';
+  ctx.fillText("Hello World", 500, 550);
+</script>
+</body>
+</html>
