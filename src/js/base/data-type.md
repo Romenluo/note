@@ -1,7 +1,7 @@
 ### 数据类型
 
 * ECMAScript有5种基本数据类型：Undefined、Null、Boolean、Number、String。
-object属于复杂数据类型，因此js有六种数据类型。
+object属于复杂数据类型，因此js有六种数据类型。(es6中添加Symbol类型)
 
 + 检测数据类型：使用 typeof 检查一个变量的数据类型。
     - 检查有一个变量没有赋值时，数据类型为 undefined。
