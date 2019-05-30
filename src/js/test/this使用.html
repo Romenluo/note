@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>this</title>
+</head>
+<body>
+
+<script>
+  let person = {
+    name: 'luomen',
+    age: 25,
+    hello() {
+      console.log(this.name);
+    }
+  }
+  let user = person;
+  person = null;
+  user.hello();
+
+  /*--------------------------------------*/
+  let user1 = {
+    name: '一号前端'
+  }
+  let user2 = {
+    name: '二号前端'
+  }
+
+  function fun() {
+    console.log(this.name)
+  }
+
+  user1.f = fun; // [注] 此处不能写成user1.f = fun()。因为fun表示的是一个变量，不是调用，
+  user2.f = fun;
+
+  user1.f();//输出 ‘一号前端’，表示user1调用的函数，函数中的this表示user1
+
+  user2.f(); // 输出 ‘二号前端’ 表示user2调用的函数，函数中的this表示user2
+
+  function fun1() {
+    console.log(this)
+  }
+  fun1();
+</script>
+</body>
+</html>
