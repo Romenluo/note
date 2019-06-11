@@ -2,6 +2,25 @@
 
 访问对象中的存储的信息来完成其工作，为了访问该对象，方法中可以使用 this 关键字。
 
+JS 里的 this
+
+* 在 function 内部被创建
+* 指向调用时所在函数所绑定的对象
+* this 不能被赋值，但可以被 call/apply  改变
+
+可能使用到的地方
+>1. this 和构造器
+>2. this 和对象
+>3. this 和函数(this 和独立的函数放在一起是没有意义的)
+>4. 全局环境的 this(浏览器环境中是 window[ 严格模式下 ]， node 环境中是 global)
+>5. this 和 DOM/事件
+>6. this 可以被 call/apply 改变
+>7. me/self/that/_this 暂存 this
+>8. ES5 中新增的 bind 和 this
+>9. ES6 箭头函数(arrow function) 和 this
+
+判断 this 指向谁，看执行时而非定义时，只要函数(function)没有绑定在对象上调用，它的 this 就是 window
+
 错误的访问对象中属性的方法
 ```js
 let person = {
@@ -87,4 +106,24 @@ function fun1() {
     console.log(this)
   }
   fun1();
+```
+
+
+####　this 可以被 call/apply 改变
+
+```js
+var m1 = {
+    message: 'This is A'
+} 
+var m2 = {
+    message: 'This is B'
+}  
+ 
+function showMsg() {
+    alert(this.message)
+}
+ 
+showMsg() // undefined
+showMsg.call(m1) // 'This is A'
+showMsg.call(m2) // 'This is B'
 ```
