@@ -5,3 +5,5 @@
 * [自定义指令](./directive.md)
 
 * [vue.extend 扩展实例构造器](./extend.md)
+
+* [事件修饰符](./事件修饰符.md)

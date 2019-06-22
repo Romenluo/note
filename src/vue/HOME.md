@@ -7,6 +7,8 @@
 
 * [vue.extend 扩展实例构造器](./base/extend.md)
 
+* [事件修饰符](./base/事件修饰符.md)
+
 ### [二、vue遇到的问题](./problem/HOME.md)
 
 * [element ui 表格分页](./problem/ElementTablePagination.md)

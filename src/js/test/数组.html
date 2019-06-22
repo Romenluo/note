@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>数组</title>
+</head>
+<body>
+
+<script>
+  //在末尾添加一个css字段
+  // let arr = ['java','JavaScript','veu']
+  /*arr.push('css')
+  console.log(arr)
+
+  let shift = arr.shift();
+  console.log(shift)
+  console.log(arr)*/
+/*
+  let pop = arr.pop();
+  console.log(pop) // vue
+  console.log(arr) // ["java", "JavaScript"]*/
+
+  // arr.unshift('html')
+  // console.log(arr) // ["html", "java", "JavaScript", "veu"]
+  // let arr = ['java','JavaScript','veu']
+  // arr.splice(1,1) // 删除从位置1开始的元素，删除一个
+  // console.log(arr) // ["java", "veu"] 可以看出已经将 ‘JavaScript’ 元素删除了
+  // let r= arr.splice(1,2) // 删除从位置1开始的元素，删除2个元素
+  // console.log(r) // ["JavaScript", "veu"] 返回被删除的元素
+  // console.log(arr) //["java"]
+
+
+  // let arr = ['java','JavaScript','veu']
+  // let r= arr.splice(1,1,'html','css') // 删除从位置1开始的元素，删除1个元素,并在此位置插入两个元素元素
+  // console.log(r) //  ["JavaScript"] 返回被删除的元素
+  // console.log(arr) //["java", "html", "css", "veu"]
+
+  // 只插入元素，不删除元素
+  // let arr = ['java','JavaScript','veu']
+  // let r= arr.splice(1,0,'html','css') // 在1的位置插入元素
+  // console.log(r) //  [] 返回空元素
+  // console.log(arr) // ["java", "html", "css", "JavaScript", "veu"]
+
+
+  // let arr = ['java','JavaScript','veu']
+  // let arr1 = arr.slice(0,2)
+  // console.log(arr1) // ["java", "JavaScript"]
+  //
+  // arr1[1] = 'html'
+  // console.log(arr1) // ["java", "html"]
+  // console.log(arr) // ["java", "JavaScript", "veu"]
+
+ /* let arr1 = ['javascript','vue'],
+    arr2 = ['css','html'],
+    arr3 = ['java','nodejs']
+  let arr = arr1.concat(arr1,arr2,arr3)
+  console.log(arr) // ["javascript", "vue", "javascript", "vue", "css", "html", "java", "nodejs"]
+
+  arr[0] = 'typeScript'
+  console.log(arr1) // ["javascript", "vue"]
+  console.log(arr) // ["typeScript", "vue", "javascript", "vue", "css", "html", "java", "nodejs"]*/
+
+ /*数组查询*/
+  // let arr = ["typeScript","javascript", "vue", "css", "html", "java", "nodejs"]
+  // let index = arr.indexOf('vue',1)
+  // console.log(index) // 2
+  //
+  // // 假如从3开始查找
+  // let s1 = arr.indexOf('vue',3)
+  // console.log(s1) // -1 表示没有查找到
+  //
+  // // 查找一个不存在的元素
+  // let s2 = arr.indexOf('c#',3)
+  // console.log(s1) // -1 表示没有查找到
+
+  /*find*/
+  // let arr = [
+  //   {id:1,name: 'JavaScript'},
+  //   {id:2,name: 'vue'},
+  //   {id:3,name: 'css'},
+  //   {id:4,name: 'html'}
+  // ]
+  // let results = arr.find((item,index,arr)=>{
+  //   return index == 2
+  // })
+  // console.log(results)// {id:3,name:'css'}
+
+  // let results = arr.findIndex((item,index,arr)=>{
+  //   return item.id==2
+  // })
+  // console.log(results)// 1
+  // let result = arr.filter((item,index,arr)=>{
+  //   return item.id>2
+  // })
+  // console.log(result) // [{id: 3, name: "css"}, {id: 4, name: "html"}]
+
+  // let arr = [
+  //   {id:1,name: 'JavaScript'},
+  //   {id:2,name: 'vue'},
+  //   {id:3,name: 'css'},
+  //   {id:4,name: 'html'}
+  // ]
+  //
+  // let result = arr.map((item,index,arr)=>{
+  //   return item.id
+  // })
+  // console.log(result) // [1, 2, 3, 4]
+
+  // let arr = [ 1, 2, 15 ];
+  // arr.sort((a, b)=> {
+  //   return a - b;
+  // });
+  // console.log(arr);  // 1, 2, 15
+
+  /*颠倒元素*/
+  // let arr = ['java','JavaScript','veu']
+  // let arr1 = arr.reverse()
+  // console.log(arr1) // ["veu", "JavaScript", "java"]
+
+  // let str = 'java,JavaScript,veu'
+  // let arr = str.split(',')
+  // console.log(arr) // ["java", "JavaScript", "veu"]
+
+  // let arr = ['java','JavaScript','veu']
+  // let str = arr.join(' ') // java JavaScript veu  以空格隔开
+  // console.log(str)
+
+  // arr.forEach((item,index,arr)=>{
+  //   console.log(item)
+  // })
+
+  let arr1 = ['java','JavaScript','veu']
+  let arr2 = '1234'
+  console.log(Array.isArray(arr1)) // true
+  console.log(Array.isArray(arr2)) // false
+</script>
+</body>
+</html>
