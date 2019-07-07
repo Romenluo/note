@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D图片</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            /*perspective: 1000px;*//*现在是一个立方体，不需要视觉效果*/
+            margin: 200px auto;
+            position: relative;
+
+            transform-style: preserve-3d;
+            transition: all 3s;
+
+            transform: rotateZ(30deg) rotateX(50deg);
+        }
+        .box div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 40px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .front{
+            background-color: #ff2b0e;
+            transform: translateZ(100px);
+        }
+        .back{
+            background-color: #44ffbc;
+            transform: translateZ(-100px);
+        }
+        .left{
+            background-color: #ffc5dd;
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        .right{
+            background-color: #ff667c;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .top{
+            background-color: #ff00f8;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .bottom{
+            background-color: #796cff;
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+        .box:hover{
+          transform: rotateX(180deg) rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="front">front</div>
+    <div class="back">back</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="top">top</div>
+    <div class="bottom">bottom</div>
+</div>
+</body>
+</html>

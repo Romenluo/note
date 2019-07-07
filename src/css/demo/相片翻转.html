@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D图片</title>
+    <style>
+        .box {
+            margin: 20px auto;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            transition: all 3s;
+            transform-style: preserve-3d;/*将变成三维视图，然后旋转*/
+        }
+        .box:before,.box:after{
+            content: '';
+            height: 100%;
+            width: 100%;
+            line-height: 300px;
+            font-size: 30px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box:before{
+            background-color: #ff5153;
+            content: '美女';
+            transform: rotateY(180deg);
+            /*transform: translateZ(0px);!*需要设置两个盒子之间的距离才会有效果*!*/
+        }
+        .box:after{
+            /*content: '美女';*/
+            background: url(./images/demo.jpg);
+            background-size: 300px 300px;
+            transform: translateZ(0px);
+        }
+        .box:hover{
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+</div>
+</body>
+</html>

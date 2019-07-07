@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D图片</title>
+    <style>
+        .box {
+            height: 40px;
+            display: flex;
+        }
+
+        .box .nav {
+            width: 150px;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+
+        .nav span {
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            line-height: 40px;
+            text-align: center;
+            top: 0;
+            left: 0px;
+        }
+
+        .nav span:first-child {
+            background-color: #6bff5f;
+            transform: rotateX(90deg) translateZ(20px);
+        }
+
+        .nav span:last-child {
+            background-color: #ff5153;
+            transform: translateZ(20px);
+        }
+
+        .nav:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="nav">
+        <span>进入</span>
+        <span>首页</span>
+    </div>
+    <div class="nav">
+        <span>进入</span>
+        <span>设置</span>
+    </div>
+    <div class="nav">
+        <span>进入</span>
+        <span>个人中心</span>
+    </div>
+    <div class="nav">
+        <span>进入</span>
+        <span>我的</span>
+    </div>
+</div>
+</body>
+</html>

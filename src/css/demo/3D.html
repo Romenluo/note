@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D图片</title>
+    <style>
+        .rotateX {
+            margin: 20px auto;
+            height: 300px;
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .rotateX img{
+            transition: all 3s; /*表示动画3秒*/
+            width: 100%;
+            height: 100%;
+        }
+        .rotateX img:hover {
+            /*表示图片X轴旋转180度，如果是-的就是反向选择180度,遵循左手法则*/
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="rotateX">
+    <img src="./images/demo.jpg">
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D图片</title>
+    <style>
+        .translateZ {
+            margin: 20px auto;
+            height: 600px;
+            width: 600px;
+            overflow: hidden;
+            /*添加一个透视，只是呈现一种视觉上的效果。是旋转的效果更明显*/
+            /*写法一：作为一个独立的属性，设置给父元素，作用于3D旋转的子元素*/
+            /*写法二： 作用于transform属性的一个值，作用于自身*/
+            /*值一般取600到1200.如果要效果明显值需要设置的越小*/
+            perspective: 1000px;/*写法一*/
+        }
+
+        .translateZ .box{
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            background-color: #6bff5f;
+            transition: all 3s;
+        }
+        .translateZ:hover .box{
+            /*transform: rotateY(-180deg);*/
+            transform: translateZ(100px);
+            /*transform: perspective(100px) rotateY(180deg);!*写法二*!*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="translateZ">
+    <div class="box">你好</div>
+</div>
+</body>
+</html>
