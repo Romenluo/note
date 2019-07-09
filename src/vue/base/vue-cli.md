@@ -12,3 +12,9 @@
 >1. npm install -g @vue/cli
 >2. vue create first-cue-cli3
 
+#### 创建electron-vue项目
+>1. 首先安装vue-cli2.0框架。
+>2. 全局安装electron ： npm install -g electron
+>3. 安装脚手架 vue init simulatedgreg/electron-vue my-project
+>4. npm install 安装依赖
+
