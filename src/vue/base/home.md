@@ -7,3 +7,5 @@
 * [vue.extend 扩展实例构造器](./extend.md)
 
 * [事件修饰符](./事件修饰符.md)
+
+* [vue-cli的创建](./vue-cli.md)
