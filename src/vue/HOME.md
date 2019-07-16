@@ -9,6 +9,8 @@
 
 * [事件修饰符](./base/事件修饰符.md)
 
+* [vue-cli的创建](./base/vue-cli.md)
+
 ### [二、vue遇到的问题](./problem/HOME.md)
 
 * [element ui 表格分页](./problem/ElementTablePagination.md)
